@@ -4,6 +4,7 @@ import numpy as np
 import pandas as pd
 from sklearn.linear_model import LogisticRegression
 from sklearn.datasets import load_iris
+from PIL import Image
 
 # データセット読み込み
 iris = load_iris()
@@ -58,6 +59,20 @@ st.write(pred_df)
 name = pred_df.idxmax(axis=1).tolist()
 st.write('## Result')
 st.write('このアイリスはきっと',str(name[0]),'です!')
+
+if name[0] == 'setosa':
+    img = Image.open('setosa.jpg')
+    st.image(img,caption = 'Iris' , use_column_width = True)
+
+
+if name[0] == 'versicolor':
+    img = Image.open('versicolor.jpg')
+    st.image(img,caption = 'Iris' , use_column_width = True)
+
+
+if name[0] == 'virginica':
+    img = Image.open('virginica.jpg')
+    st.image(img,caption = 'Iris' , use_column_width = True)
 
 st.write('## Data set')
 st.write(df)
