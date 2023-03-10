@@ -45,7 +45,7 @@ value_df.set_index('data',inplace=True)
 
 # 入力値の値
 st.write(value_df)
-st.write(iris.data[:, :] )
+st.write('更新できた？')
 st.write(df.min())
 # 入力値の値
 st.dataframe(value_df)
