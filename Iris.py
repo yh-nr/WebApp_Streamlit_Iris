@@ -57,22 +57,22 @@ st.write(pred_df)
 
 # 予測結果の出力
 name = pred_df.idxmax(axis=1).tolist()
-st.write('## Result', width=160)
+st.write('## Result')
 st.write('このアイリスはきっと',str(name[0]),'です!')
 
 if name[0] == 'setosa':
-    img = Image.open('setosa.jpg', width=160)
-    st.image(img,caption = 'setosa' , use_column_width = True)
+    img = Image.open('setosa.jpg')
+    st.image(img,caption = 'setosa' , use_column_width = True, width=160)
 
 
 if name[0] == 'versicolor':
-    img = Image.open('versicolor.jpg', width=160)
-    st.image(img,caption = 'versicolor' , use_column_width = True)
+    img = Image.open('versicolor.jpg')
+    st.image(img,caption = 'versicolor' , use_column_width = True, width=160)
 
 
 if name[0] == 'virginica':
     img = Image.open('virginica.jpg')
-    st.image(img,caption = 'virginica' , use_column_width = True)
+    st.image(img,caption = 'virginica' , use_column_width = True, width=160)
 
 st.write('## Data set')
 st.write(df)
