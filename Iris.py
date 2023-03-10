@@ -62,17 +62,17 @@ st.write('このアイリスはきっと',str(name[0]),'です!')
 
 if name[0] == 'setosa':
     img = Image.open('setosa.jpg')
-    st.image(img,caption = 'setosa' , use_column_width = True, width=160)
+    st.image(img,caption = 'setosa' , width=360)
 
 
 if name[0] == 'versicolor':
     img = Image.open('versicolor.jpg')
-    st.image(img,caption = 'versicolor' , use_column_width = True, width=160)
+    st.image(img,caption = 'versicolor' , width=360)
 
 
 if name[0] == 'virginica':
     img = Image.open('virginica.jpg')
-    st.image(img,caption = 'virginica' , use_column_width = True, width=160)
+    st.image(img,caption = 'virginica' , width=360)
 
 st.write('## Data set')
 st.write(df)
