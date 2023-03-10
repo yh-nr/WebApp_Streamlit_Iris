@@ -46,8 +46,6 @@ value_df.set_index('data',inplace=True)
 # 入力値の値
 st.write(value_df)
 
-# データフレーム
-st.write(df)
 
 # 予測値のデータフレーム
 pred_probs = clf.predict_proba(value_df)
@@ -61,4 +59,5 @@ name = pred_df.idxmax(axis=1).tolist()
 st.write('## Result')
 st.write('このアイリスはきっと',str(name[0]),'です!')
 
-print('このアイリスはきっと',str(name[0]),'です!')
+st.write('#Data set')
+st.write(df)
