@@ -45,10 +45,9 @@ value_df.set_index('data',inplace=True)
 
 # 入力値の値
 st.write(value_df)
-st.write('更新できた？')
-st.write(df.min())
-# 入力値の値
-st.dataframe(value_df)
+
+# データフレーム
+st.write(df)
 
 # 予測値のデータフレーム
 pred_probs = clf.predict_proba(value_df)
