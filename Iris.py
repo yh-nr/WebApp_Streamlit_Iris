@@ -41,7 +41,7 @@ st.write('## Input Value')
 # インプットデータ（1行のデータフレーム）
 value_df = pd.DataFrame([],columns=['data','sepal length (cm)','sepal width (cm)','petal length (cm)','petal width (cm)'])
 record = pd.Series(['data',sepalValue,sepalWValue, petalValue, petalWValue], index=value_df.columns)
-value_df = value_df.append(record, ignore_index=True)
+value_df = pd.concat([value_df, pd.DataFrame([record])], axis=0, ignore_index=True)
 value_df.set_index('data',inplace=True)
 
 # 入力値の値
